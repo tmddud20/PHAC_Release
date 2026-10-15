@@ -1,0 +1,30 @@
+global:
+  output_dir: '../checkpoints'
+  exp_name: 'po_ca'
+  seed: 2434
+  foundation_ckpt: '../checkpoints/pix2gestalt.ckpt'
+
+dataset:
+  train_data_dir: '../data/occ_thuman/occ_THuman2_r512_v10_pose_train.h5'
+  validation_data_dir: '../data/occ_thuman/occ_THuman2_r512_v10_pose_test.h5'
+  dataloader_num_workers: 8
+  resolution: 512
+  control_type: 'po'  # ib | eb | po | poib | poeb
+
+training:
+  train_batch_size: 14
+  num_train_epochs: 1750
+  checkpointing_steps: 2500
+
+network:
+  drop_prob: 0.05
+  guidance_scale: 2
+  conditioning_scale: 1.0
+
+optimizer:
+  lr: 5e-6
+  lr_controlnet: 5e-5
+  lr_scheduler: 'constant_with_warmup'
+
+misc:
+  report_to: 'wandb'

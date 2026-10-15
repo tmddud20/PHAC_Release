@@ -1,0 +1,21 @@
+# PyTorch, torchvision, Kaolin, nvdiffrast, and OpenAI CLIP are installed
+# separately because their builds depend on the local CUDA/PyTorch versions.
+accelerate==0.24.1
+diffusers==0.31.0
+einops==0.8.1
+h5py==3.14.0
+lpips==0.1.4
+mediapipe==0.10.18
+numpy==1.23.5
+opencv-python==4.8.1.78
+packaging==24.1
+pillow==9.5.0
+pycocotools==2.0.8
+pyyaml==6.0.2
+smplx[all]
+tinyobjloader==2.0.0rc8
+tqdm==4.66.5
+transformers==4.27.0
+trimesh
+wandb==0.22.1
+xatlas
